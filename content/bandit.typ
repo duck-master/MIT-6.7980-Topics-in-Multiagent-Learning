@@ -6,13 +6,14 @@
   title: "Learning with bandit feedback",
 )
 
+// Following the intro, the lecture notes always refers to the learner with she/her pronouns (you can change this later on)
 The #lecture-link("learning_intro", <def-external-regret>)[regret-minimization model] we've considered so far assumes that the learner receives enough information from the environment that she can compute her utility not only on the strategy she selected to play at each round of the interaction but also any counter-factual strategy that she could have played at that round. In more technical terms, we assume _full-information_ feedback. 
 
-This is a very strong assumption, and in many cases, the decision-maker only receives partial feedback. In this lecture, we consider the special case where the decision maker receives feedback only on the strategy they played. This is known as _bandit feedback_.
+This is a very strong assumption, and in many cases, the decision-maker only receives partial feedback. In this lecture, we consider the special case where the decision maker receives feedback only on the strategy she played. This is known as _bandit feedback_.
 
 = Setup and general considerations
 
-Like in our prior lectures, we will study _linear_ settings, where our sequential decision-maker chooses a strategy $vx^((t)) in cX$ in some strategy set satisfying $cX subset.eq RR^n$. In the full-information setting that we have already studied, the feedback that our decision maker receives, at every round $t$, is a utility function $u^((t)): vx |-> ip(vg^((t)), vx)$, from which they can compute their realized utility, $w^((t)) := ip(vg^((t)), vx^((t)))$, for the strategy they played as well as the counterfactual utility they would have received from any strategy they could have played. In the _bandit_ setting, the decision-maker only receives as feedback their realized utility $w^((t))$ as opposed to their complete utility function $u^((t))$.
+Like in our prior lectures, we will study _linear_ settings, where our sequential decision-maker chooses a strategy $vx^((t)) in cX$ in some strategy set satisfying $cX subset.eq RR^n$. In the full-information setting that we have already studied, the feedback that our decision maker receives, at every round $t$, is a utility function $u^((t)): vx |-> ip(vg^((t)), vx)$, from which she can compute her realized utility, $w^((t)) := ip(vg^((t)), vx^((t)))$, for the strategy she played as well as the counterfactual utility she would have received from any strategy she could have played. In the _bandit_ setting, the decision-maker only receives as feedback her realized utility $w^((t))$ as opposed to their complete utility function $u^((t))$.
 
 As a general principle, algorithms for the _bandit_ setting are constructed from regret minimizers for the full-information setting. Indeed, the key idea is to construct an _estimator_ $tilde(vg)^((t))$ of the (unobserved) utility gradient $vg^((t))$, and feed that into a full-information regret minimizer. The estimator is constructed from the observed utility $w^((t))$ and the chosen strategy $vx^((t))$.
 
