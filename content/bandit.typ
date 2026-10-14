@@ -138,6 +138,6 @@ The confidence parameter enters the logarithm and the bonus. Adding exploration 
 = Adversarial bandit learning on general convex domains
 
 Today, we know that bandit optimization is possible well past probability simplexes. In fact, we can construct bandit algorithms for any convex and compact domain $cX subset.eq RR^d$.
-In particular, we mention the general general result by #citet(<abernethy2008competing>), who showed that the a bandit algorithm can be constructed starting from a full-information regret miminizer built using the FTRL algorithm with a self-concordant distance-generating function.
+In particular, we mention the general general result by #citet(<abernethy2008competing>), who showed that a bandit algorithm can be constructed starting from a full-information regret miminizer built using the FTRL algorithm with a self-concordant distance-generating function.
 
 #lec_bibliography("meta/refs.bib")
