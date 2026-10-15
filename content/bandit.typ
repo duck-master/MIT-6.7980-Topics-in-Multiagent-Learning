@@ -7,7 +7,7 @@
 )
 
 // Following the intro, the lecture notes always refers to the learner with she/her pronouns (you can change this later on)
-The #lecture-link("learning_intro", <def-external-regret>)[regret-minimization model] we've considered so far assumes that the learner receives enough information from the environment that she can compute her utility not only on the strategy she selected to play at each round of the interaction but also any counterfactual strategy that she could have played at that round. In more technical terms, we assume _full-information_ feedback. 
+The #lecture-link("learning_intro", <def-external-regret>)[regret-minimization model] we've considered so far assumes that the learner receives enough information from the environment that she can compute her utility not only on the strategy she selected to play at each round of the interaction but also any counterfactual strategy that she could have played at that round. In more technical terms, we assume _full-information_ feedback.
 
 This is a very strong assumption, and in many cases, the decision maker only receives partial feedback. In this lecture, we consider the special case where the decision maker receives feedback only on the strategy she played. This is known as _bandit feedback_.
 
